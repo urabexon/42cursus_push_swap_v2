@@ -6,7 +6,7 @@
 /*   By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 19:40:26 by hurabe            #+#    #+#             */
-/*   Updated: 2024/09/26 20:42:55 by hurabe           ###   ########.fr       */
+/*   Updated: 2024/09/27 18:54:28 by hurabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,76 +56,44 @@ void	ft_lstadd_front(t_list **lst, t_list *new);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstclear(t_list **lst);
 
-
-//command process function
-//スタックを操作するコマンド関数
-//void	push(t_dst **send, t_dst **recieve);
-//void	reverse_rotate(t_dst **dst);
-//void	rotate(t_dst **dst);
-//void	swap(t_dst **dst);
-
 //command process items
 //スタックを操作するコマンド関数
-void	sa(t_dst **a);
-void	sb(t_dst **b);
-void	ss(t_dst **a, t_dst **b);
-void	pa(t_dst **a, t_dst **b);
-void	pb(t_dst **a, t_dst **b);
-void	ra(t_dst **a);
-void	rb(t_dst **b);
-void	rr(t_dst **a, t_dst **b);
-void	rra(t_dst **a);
-void	rrb(t_dst **b);
-void	rrr(t_dst **a, t_dst **b);
+void	sa(t_list **la, int select);
+void	sb(t_list **lb, int select);
+void	ss(t_list **la, t_list **lb, int select);
+void	pa(t_list **lst1, t_list **lst2, int select);
+void	pb(t_list **lst1, t_list **lst2, int select);
+void	ra(t_list **la, int select);
+void	rb(t_list **lb, int select);
+void	rr(t_list **la, t_list **lb, int select);
+void	rra(t_list **la, int select);
+void	rrb(t_list **lb, int select);
+void	rrr(t_list **la, t_list **lb, int select);
 
-//error
+// node_hundling
+void	func_s(t_list **lst);
+void	func_p(t_list **lst1, t_list **lst2);
+void	func_r(t_list **lst);
+void	func_rr(t_list **lst);
+
+// check
 //エラーチェック
-int		output_error(void);
-void	error_component(char **stk, char **argv, int i);
-int		is_argv_error(char **argv);
+int		check_argv(int i, char **argv);
+int		check_atoi(char *str);
+int		check_double(t_list **la);
+int		check_order(int size, t_list **la);
 
-//coordinate press
-//座標圧縮、値の範囲を縮めて基数ソートの効率を図る
-//int		partition(long *arr, int low, int high);
-//void	quicksort(long *arr, int low, int high);
-//long	*sort(char **argv, int len);
-long	*coordinate_press(char **argv, int len);
+// put_result
+int		put_error(void);
+//void	put_bonus_result(t_list **la, t_list **lb, int size)
 
-// init_dst
-void	init_dst(t_dst **a, t_dst **b, char **argv, t_config *conf);
-int		is_ascending(t_dst **a);
-int		is_descending(t_dst **b);
+// make_stack
+int		set_stack(t_list **la, int argc, char **argv);
+int		make_stack(t_list **la, int argc, char **argv);
+int		set_new_node(t_list **la, char *str);
 
-// ps_isfunction
-void	three_arg(char **argv, t_dst **a, t_dst **b);
-int		is_swap(t_dst **a, t_dst **b);
-int		is_rotate(t_dst **a, t_dst **b);
-void	let_go(t_dst **a, t_dst **b, int is_swap, int is_rotate);
-int		alg_1(t_dst **a, t_dst **b);
+// compression
+void	compression(t_list **la, int size);
 
-//radix sort
-//基数ソート本体、スタックA（t_dst **a）をソートし、必要に応じてスタックB（t_dst **b）を使用してデータの移動を行う
-//long	get_top(t_dst *dst);
-void	radix_sort(t_dst **a, t_dst **b, t_config *conf);
-
-// sep_pivot
-long	get_pivot_n(char **argv);
-void	sep_pivot(char **argv, t_dst **a, t_dst **b, long pivot_num);
-
-// kim
-int		split_argv(char ***strs, char **argv, char *sep);
-int		is_valid(char **strs);
-
-
-//main
-int		count_argv(char **argv);
-void	many_pb(t_dst **a, t_dst **b);
-int		under_5_argv(t_dst **a, t_dst **b, char **argv, t_config *conf);
-
-//
-void push_smallest_to_b(t_dst **a, t_dst **b);
-void four_arg(char **argv, t_dst **a, t_dst **b);
-void five_arg(char **argv, t_dst **a, t_dst **b);
-void six_arg(char **argv, t_dst **a, t_dst **b);
 
 #endif

@@ -1,36 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   command_rr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/26 19:51:39 by hurabe            #+#    #+#             */
-/*   Updated: 2024/09/27 18:55:48 by hurabe           ###   ########.fr       */
+/*   Created: 2024/09/27 18:31:49 by hurabe            #+#    #+#             */
+/*   Updated: 2024/09/27 18:38:15 by hurabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-int	main(int argc, char **argv)
+void	rra(t_list **la, int select)
 {
-	t_list	*la;
-	int		size;
+	if (!(*la))
+		return ;
+	func_rr(la);
+	if (select == MANDATORY)
+		write(1, "rra\n", 4);
+}
 
-	la = NULL;
-	if (argc == 1)
-		return (1);
-	if (argc >= 2)
-	{
-		if (!check_argv(argc, argv))
-			return (put_error(), 1);
-		if (!set_stack(&la, argc, argv))
-			return (put_error(), 1);
-		size = ft_lstsize(&la);
-		compression(&la, size);
-		if (check_order(size, &la))
-			return (ft_lstclear(&la), 0);
-		sort_start(size, &la);
-		return (ft_lstclear(&la), 0);
-	}
+void	rrb(t_list **lb, int select)
+{
+	if (!(*lb))
+		return ;
+	func_rr(lb);
+	if (select == MANDATORY)
+		write(1, "rrb\n", 4);
+}
+
+void	rrr(t_list **la, t_list **lb, int select)
+{
+	if (!(*la) || !(*lb))
+		return ;
+	func_rr(la);
+	func_rr(lb);
+	if (select == MANDATORY)
+		write(1, "rrr\n", 4);
 }

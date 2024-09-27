@@ -6,11 +6,11 @@
 /*   By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 19:51:42 by hurabe            #+#    #+#             */
-/*   Updated: 2024/09/26 20:30:32 by hurabe           ###   ########.fr       */
+/*   Updated: 2024/09/27 18:55:24 by hurabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../../push_swap.h"
 
 int	check_argv(int i, char **argv)
 {

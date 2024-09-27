@@ -6,11 +6,11 @@
 /*   By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 20:49:20 by hurabe            #+#    #+#             */
-/*   Updated: 2024/09/26 21:00:01 by hurabe           ###   ########.fr       */
+/*   Updated: 2024/09/27 18:55:39 by hurabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../../push_swap.h"
 
 int	set_stack(t_list **la, int argc, char **argv)
 {

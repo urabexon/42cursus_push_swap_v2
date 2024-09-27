@@ -1,36 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   check_double.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/26 19:51:39 by hurabe            #+#    #+#             */
-/*   Updated: 2024/09/27 18:55:48 by hurabe           ###   ########.fr       */
+/*   Created: 2024/09/27 17:29:11 by hurabe            #+#    #+#             */
+/*   Updated: 2024/09/27 18:55:29 by hurabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-int	main(int argc, char **argv)
+int	check_double(t_list **la)
 {
-	t_list	*la;
-	int		size;
+	t_list	*i;
+	t_list	*j;
+	int		count;
 
-	la = NULL;
-	if (argc == 1)
-		return (1);
-	if (argc >= 2)
+	i = *la;
+	while (1)
 	{
-		if (!check_argv(argc, argv))
-			return (put_error(), 1);
-		if (!set_stack(&la, argc, argv))
-			return (put_error(), 1);
-		size = ft_lstsize(&la);
-		compression(&la, size);
-		if (check_order(size, &la))
-			return (ft_lstclear(&la), 0);
-		sort_start(size, &la);
-		return (ft_lstclear(&la), 0);
+		count = 0;
+		j = *la;
+		while (1)
+		{
+			if (i->num == j->num)
+				count++;
+			j = j->next;
+			if (j == *la)
+				break ;
+		}
+		if (count > 1)
+			return (FALSE);
+		i = i->next;
+		if (i == *la)
+			break ;
 	}
+	return (TRUE);
 }
