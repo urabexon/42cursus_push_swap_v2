@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_start.c                                       :+:      :+:    :+:   */
+/*   sort_start_4.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/26 21:12:54 by hurabe            #+#    #+#             */
-/*   Updated: 2024/09/27 19:03:22 by hurabe           ###   ########.fr       */
+/*   Created: 2024/09/27 19:05:20 by hurabe            #+#    #+#             */
+/*   Updated: 2024/09/27 19:52:29 by hurabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-void	sort_start(int size, t_list **la)
+void	sort_start_4(t_list **la, t_list **lb, int index)
 {
-	t_list	*lb;
+	int	order;
 
-	lb = NULL;
-	if (size == 2)
+	order = check_index(la, index, 4);
+	if (order == 1)
+		ra(la, MANDATORY);
+	else if (order == 2 || order == 3)
 	{
-		if ((*la)->index > (*la)->next->index)
-			sa(la, MANDATORY);
+		while (order < 4)
+		{
+			rra(la, MANDATORY);
+			order++;
+		}
 	}
-	else if (size == 3)
-		sort_start_3(la);
-	else if (size == 4)
-		sort_start_4(la, &lb, 0);
-	else if (size == 5)
-		sort_start_5(la, &lb);
-	else if (size > 5 && size < 20)
-		sort_start_6_to_20(la, &lb, size);
-	else
-		sort_start_x(la, &lb, size);
+	pb(la, lb, MANDATORY);
+	sort_start_3(la);
+	pa(lb, la, MANDATORY);
 }

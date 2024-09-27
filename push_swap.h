@@ -6,7 +6,7 @@
 /*   By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 19:40:26 by hurabe            #+#    #+#             */
-/*   Updated: 2024/09/27 18:54:28 by hurabe           ###   ########.fr       */
+/*   Updated: 2024/09/27 20:58:11 by hurabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,6 @@ void	ft_putstr_fd(char *s, int fd);
 size_t	ft_strlen(const char *s);
 char	**ft_split(char const *s, char c);
 int		ft_strcmp(char *s1, char *s2);
-char	*ft_strdup(const char *s1);
-char	*ft_strjoin(char const *s1, char const *s2);
-char	*ft_substr(char const *s, unsigned int start, size_t len);
 t_list	*ft_lstnew(int num);
 int		ft_lstsize(t_list **lst);
 void	ft_lstadd_front(t_list **lst, t_list *new);
@@ -82,6 +79,7 @@ int		check_argv(int i, char **argv);
 int		check_atoi(char *str);
 int		check_double(t_list **la);
 int		check_order(int size, t_list **la);
+int		check_index(t_list **lst, int index, int size);
 
 // put_result
 int		put_error(void);
@@ -95,5 +93,16 @@ int		set_new_node(t_list **la, char *str);
 // compression
 void	compression(t_list **la, int size);
 
+// sort_start
+void	sort_start(int size, t_list **la);
+void	sort_start_3(t_list **la);
+void	sort_start_4(t_list **la, t_list **lb, int index);
+void	sort_start_5(t_list **la, t_list **lb);
+void	sort_start_6_to_20(t_list **la, t_list **lb, int size);
+void	sort_start_x(t_list **la, t_list **lb, int size);
+void	sort_start_pb(t_list **la, t_list **lb, int size, int range);
+void	marge_or_not(t_list **la, t_list **lb, int range);
+void	rotate_j(t_list **la, t_list **lb, int j);
+void	rev_rotate_j(t_list **la, t_list **lb, int j);
 
 #endif

@@ -1,32 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   sort_start_5.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/22 13:07:55 by hurabe            #+#    #+#             */
-/*   Updated: 2024/09/24 20:10:00 by hurabe           ###   ########.fr       */
+/*   Created: 2024/09/27 19:05:24 by hurabe            #+#    #+#             */
+/*   Updated: 2024/09/27 20:03:37 by hurabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+void	sort_start_5(t_list **la, t_list **lb)
 {
-	char	*str1;
-	char	*str2;
+	int	order;
 
-	if (!s1 || !s2)
-		return (NULL);
-	str1 = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
-	if (!str1)
-		return (NULL);
-	str2 = str1;
-	while (*s1)
-		*str2++ = *s1++;
-	while (*s2)
-		*str2++ = *s2++;
-	*str2 = '\0';
-	return (str1);
+	order = check_index(la, 0, 5);
+	if (order == 1 || order == 2)
+	{
+		while (order > 0)
+		{
+			ra(la, MANDATORY);
+			order--;
+		}
+	}
+	else if (order == 3 || order == 4)
+	{
+		while (order < 5)
+		{
+			rra(la, MANDATORY);
+			order++;
+		}
+	}
+	pb(la, lb, MANDATORY);
+	sort_start_4(la, lb, 1);
+	pa(lb, la, MANDATORY);
 }

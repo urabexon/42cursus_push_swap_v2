@@ -1,18 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   sort_start_6_to_20.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/22 13:07:47 by hurabe            #+#    #+#             */
-/*   Updated: 2024/09/24 20:09:50 by hurabe           ###   ########.fr       */
+/*   Created: 2024/09/27 19:05:27 by hurabe            #+#    #+#             */
+/*   Updated: 2024/09/27 20:07:42 by hurabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-char	*ft_strdup(const char *s1)
+void	sort_start_6_to_20(t_list **la, t_list **lb, int size)
 {
-	return (ft_substr(s1, 0, ft_strlen(s1)));
+	int	i;
+
+	i = 0;
+	while (i < size)
+	{
+		if ((*la)->index == i)
+		{
+			pb(la, lb, MANDATORY);
+			i++;
+		}
+		else
+			ra(la, MANDATORY);
+	}
+	while (i > 0)
+	{
+		pa(lb, la, MANDATORY);
+		i--;
+	}
 }
