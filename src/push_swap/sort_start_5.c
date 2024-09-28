@@ -6,11 +6,11 @@
 /*   By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 19:05:24 by hurabe            #+#    #+#             */
-/*   Updated: 2024/09/27 20:03:37 by hurabe           ###   ########.fr       */
+/*   Updated: 2024/09/28 17:49:58 by hurabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../push_swap.h"
+#include "../include/push_swap.h"
 
 void	sort_start_5(t_list **la, t_list **lb)
 {

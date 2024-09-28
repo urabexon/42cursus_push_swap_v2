@@ -6,11 +6,11 @@
 /*   By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 19:53:19 by hurabe            #+#    #+#             */
-/*   Updated: 2024/09/27 19:56:07 by hurabe           ###   ########.fr       */
+/*   Updated: 2024/09/28 17:49:21 by hurabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../push_swap.h"
+#include "../include/push_swap.h"
 
 int	check_index(t_list **lst, int index, int size)
 {

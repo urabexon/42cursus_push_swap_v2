@@ -6,11 +6,23 @@
 /*   By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 19:51:39 by hurabe            #+#    #+#             */
-/*   Updated: 2024/09/27 18:55:48 by hurabe           ###   ########.fr       */
+/*   Updated: 2024/09/28 20:36:51 by hurabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../push_swap.h"
+#include "../include/push_swap.h"
+
+//int	set_stack(t_list **la, int argc, char **argv)
+//{
+//	int		i;
+//	t_list	*new_node;
+
+//	i = 1;
+//	while (i < argc)
+//	{
+//		new_node = ft_lst
+//	}
+//}
 
 int	main(int argc, char **argv)
 {

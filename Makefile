@@ -6,18 +6,22 @@
 #    By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/26 19:40:29 by hurabe            #+#    #+#              #
-#    Updated: 2024/09/27 21:39:30 by hurabe           ###   ########.fr        #
+#    Updated: 2024/09/28 19:43:20 by hurabe           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME					=	push_swap
-INCLUDE					=	push_swap.h
+INCLUDE					=	-I src/include
+CC						=   clang
 CFLAGS					=	-Wall -Wextra -Werror
 RM						=	rm -f
 FOLDER					=	src
 ITEM_FOLDER				=	src/items
 LIBFT_FOLDER			=	src/libft
 PUSH_SWAP_FOLDER		=	src/push_swap
+
+TEST_FILE = \
+tests/check_argv_test.c
 
 FUNCTIONS				=	$(PUSH_SWAP_FOLDER)/check_argv.c $(PUSH_SWAP_FOLDER)/check_double.c $(PUSH_SWAP_FOLDER)/check_index.c $(PUSH_SWAP_FOLDER)/check_order.c $(PUSH_SWAP_FOLDER)/compression.c \
 							$(PUSH_SWAP_FOLDER)/make_stack.c $(PUSH_SWAP_FOLDER)/node_hundling.c $(PUSH_SWAP_FOLDER)/push_swap.c $(PUSH_SWAP_FOLDER)/put_result.c $(PUSH_SWAP_FOLDER)/sort_start.c \
@@ -31,13 +35,13 @@ OBJ	= $(FUNCTIONS:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	cc $(CFLAGS) -I$(INCLUDE) $(OBJ) -o push_swap
+	$(CC) $(CFLAGS) $(INCLUDE) $(OBJ) -o $(NAME)
 
 .c.o:
-	cc $(CFLAGS) -I$(INCLUDE) -c $< -o $@
+	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
 
 fsanitize:
-	cc $(CFLAGS) -g -fsanitize=address -I$(INCLUDE) $(FUNCTIONS) -o push_swap
+	$(CC) $(CFLAGS) -g -fsanitize=address $(INCLUDE) $(OBJ) -o $(NAME)
 
 clean:
 	$(RM) $(OBJ)
@@ -47,4 +51,6 @@ fclean:
 
 re: clean all
 
+test: $(OBJ)
+	$(CC) $(CFLSGS) $(TEST_FILE)  $(OBJ)
 .PHONY: all clean fclean re

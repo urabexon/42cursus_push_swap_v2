@@ -6,11 +6,11 @@
 /*   By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 18:31:49 by hurabe            #+#    #+#             */
-/*   Updated: 2024/09/27 18:38:15 by hurabe           ###   ########.fr       */
+/*   Updated: 2024/09/28 17:46:49 by hurabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../push_swap.h"
+#include "../include/push_swap.h"
 
 void	rra(t_list **la, int select)
 {

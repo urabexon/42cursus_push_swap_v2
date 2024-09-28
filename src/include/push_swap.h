@@ -6,7 +6,7 @@
 /*   By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 19:40:26 by hurabe            #+#    #+#             */
-/*   Updated: 2024/09/27 20:58:11 by hurabe           ###   ########.fr       */
+/*   Updated: 2024/09/28 19:39:34 by hurabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 
 // define
 # define TRUE 1
-# define FALSE 2
+# define FALSE 0
 # define MANDATORY	1
 # define BONUS		2
 

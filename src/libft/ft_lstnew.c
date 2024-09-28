@@ -6,11 +6,11 @@
 /*   By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/19 15:31:11 by hurabe            #+#    #+#             */
-/*   Updated: 2024/09/26 20:11:10 by hurabe           ###   ########.fr       */
+/*   Updated: 2024/09/28 17:47:34 by hurabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../push_swap.h"
+#include "../include/push_swap.h"
 
 t_list	*ft_lstnew(int num)
 {

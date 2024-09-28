@@ -6,11 +6,11 @@
 /*   By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 13:08:14 by hurabe            #+#    #+#             */
-/*   Updated: 2024/09/20 17:05:26 by hurabe           ###   ########.fr       */
+/*   Updated: 2024/09/28 17:48:48 by hurabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../push_swap.h"
+#include "../include/push_swap.h"
 
 int	ft_strcmp(char *s1, char *s2)
 {

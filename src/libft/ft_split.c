@@ -6,11 +6,11 @@
 /*   By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 13:07:40 by hurabe            #+#    #+#             */
-/*   Updated: 2024/09/20 17:05:23 by hurabe           ###   ########.fr       */
+/*   Updated: 2024/09/28 17:48:43 by hurabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../push_swap.h"
+#include "../include/push_swap.h"
 
 static char	**free_array(char **array, size_t i)
 {

@@ -6,11 +6,11 @@
 /*   By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 17:48:18 by hurabe            #+#    #+#             */
-/*   Updated: 2024/09/27 18:55:42 by hurabe           ###   ########.fr       */
+/*   Updated: 2024/09/28 17:49:37 by hurabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../push_swap.h"
+#include "../include/push_swap.h"
 
 void	func_s(t_list **lst)
 {

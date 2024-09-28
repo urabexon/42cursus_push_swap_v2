@@ -6,36 +6,57 @@
 /*   By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 19:51:42 by hurabe            #+#    #+#             */
-/*   Updated: 2024/09/27 18:55:24 by hurabe           ###   ########.fr       */
+/*   Updated: 2024/09/28 21:33:42 by hurabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../push_swap.h"
+#include "../include/push_swap.h"
 
-int	check_argv(int i, char **argv)
-{
-	int	count;
-	int	j;
+int is_correct_str(char *str){
+    int	j;
 
-	while (--i > 0)
-	{
-		if (!argv[i][0])
-			return (FALSE);
 		j = 0;
-		count = 0;
-		while (argv[i][j])
+		while (str[j] != '\0')
 		{
-			while (argv[i][j] && ft_isspace(argv[i][j]))
-				j++;
-			if (argv[i][j] && (ft_issign(argv[i][j]) || ft_isdigit(argv[i][j])))
-				count += check_atoi(&argv[i][j]);
-			if (ft_issign(argv[i][j]))
-				j++;
-			while (argv[i][j] && ft_isdigit(argv[i][j]))
-				j++;
-			if ((argv[i][j] && !ft_isspace(argv[i][j])) || !count)
+			//while (str[j] && ft_isspace(str[j]))
+			//	j++;
+			//if (str[j] && (ft_issign(str[j]) || ft_isdigit(str[j])))
+			//	count += check_atoi(&str[j]);
+			if (ft_issign(str[j]))
+				break;
+			else if (!ft_isdigit(str[j])){
+				
 				return (FALSE);
+			}
+			//while (str[j] && ft_isdigit(str[j]))
+			//	j++;
+			//if ((str[j] && !ft_isspace(str[j])) || !count)
+			//	return (FALSE);
+			j++;
 		}
+		while (str[j] != '\0'){
+			if (!ft_isdigit(str[j])){
+				return (FALSE);
+			}
+			j++;
+		}
+		return (TRUE);
+
+}
+
+
+int	check_argv(int argc, char **argv){
+
+    argc--; // file minus
+
+	while (0 <= argc - 1)
+	{
+		//if (argv[argc][0] != '\0')
+		//	return (FALSE);
+		if (!is_correct_str(argv[argc])){
+			return (FALSE);
+		}
+		argc--;
 	}
 	return (TRUE);
 }

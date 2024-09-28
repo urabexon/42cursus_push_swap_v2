@@ -6,11 +6,11 @@
 /*   By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/19 15:31:03 by hurabe            #+#    #+#             */
-/*   Updated: 2024/09/26 20:07:34 by hurabe           ###   ########.fr       */
+/*   Updated: 2024/09/28 17:47:27 by hurabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../push_swap.h"
+#include "../include/push_swap.h"
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
