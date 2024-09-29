@@ -6,7 +6,7 @@
 /*   By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 19:40:26 by hurabe            #+#    #+#             */
-/*   Updated: 2024/09/28 19:39:34 by hurabe           ###   ########.fr       */
+/*   Updated: 2024/09/29 18:16:27 by hurabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstclear(t_list **lst);
 
 //command process items
-//スタックを操作するコマンド関数
 void	sa(t_list **la, int select);
 void	sb(t_list **lb, int select);
 void	ss(t_list **la, t_list **lb, int select);
@@ -74,7 +73,6 @@ void	func_r(t_list **lst);
 void	func_rr(t_list **lst);
 
 // check
-//エラーチェック
 int		check_argv(int i, char **argv);
 int		check_atoi(char *str);
 int		check_double(t_list **la);
@@ -83,7 +81,6 @@ int		check_index(t_list **lst, int index, int size);
 
 // put_result
 int		put_error(void);
-//void	put_bonus_result(t_list **la, t_list **lb, int size)
 
 // make_stack
 int		set_stack(t_list **la, int argc, char **argv);

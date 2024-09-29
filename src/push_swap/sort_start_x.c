@@ -6,7 +6,7 @@
 /*   By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 19:05:30 by hurabe            #+#    #+#             */
-/*   Updated: 2024/09/28 17:50:05 by hurabe           ###   ########.fr       */
+/*   Updated: 2024/09/29 16:59:06 by hurabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ void	rotate_j(t_list **la, t_list **lb, int j)
 {
 	while (j--)
 		rb(lb, MANDATORY);
-	pa(la, lb, MANDATORY);
+	pa(lb, la, MANDATORY);
 }
 
 void	rev_rotate_j(t_list **la, t_list **lb, int j)

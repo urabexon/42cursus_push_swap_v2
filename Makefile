@@ -6,7 +6,7 @@
 #    By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/26 19:40:29 by hurabe            #+#    #+#              #
-#    Updated: 2024/09/28 19:43:20 by hurabe           ###   ########.fr        #
+#    Updated: 2024/09/29 18:23:04 by hurabe           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,9 +19,6 @@ FOLDER					=	src
 ITEM_FOLDER				=	src/items
 LIBFT_FOLDER			=	src/libft
 PUSH_SWAP_FOLDER		=	src/push_swap
-
-TEST_FILE = \
-tests/check_argv_test.c
 
 FUNCTIONS				=	$(PUSH_SWAP_FOLDER)/check_argv.c $(PUSH_SWAP_FOLDER)/check_double.c $(PUSH_SWAP_FOLDER)/check_index.c $(PUSH_SWAP_FOLDER)/check_order.c $(PUSH_SWAP_FOLDER)/compression.c \
 							$(PUSH_SWAP_FOLDER)/make_stack.c $(PUSH_SWAP_FOLDER)/node_hundling.c $(PUSH_SWAP_FOLDER)/push_swap.c $(PUSH_SWAP_FOLDER)/put_result.c $(PUSH_SWAP_FOLDER)/sort_start.c \
@@ -51,6 +48,4 @@ fclean:
 
 re: clean all
 
-test: $(OBJ)
-	$(CC) $(CFLSGS) $(TEST_FILE)  $(OBJ)
 .PHONY: all clean fclean re

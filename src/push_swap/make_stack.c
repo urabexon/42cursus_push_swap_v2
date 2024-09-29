@@ -6,7 +6,7 @@
 /*   By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 20:49:20 by hurabe            #+#    #+#             */
-/*   Updated: 2024/09/28 18:19:57 by hurabe           ###   ########.fr       */
+/*   Updated: 2024/09/29 18:07:00 by hurabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	make_stack(t_list **la, int argc, char **argv)
 		{
 			while (argv[i][j] && ft_isspace(argv[i][j]))
 				j++;
-			if (argv[i][j] && (ft_issign(argv[i][j] || ft_isdigit(argv[i][j]))))
+			if (argv[i][j] && (ft_issign(argv[i][j]) || ft_isdigit(argv[i][j])))
 			{
 				if (!set_new_node(la, &argv[i][j++]))
 					return (ft_lstclear(la), FALSE);
